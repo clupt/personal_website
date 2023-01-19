@@ -1,0 +1,53 @@
+:root {
+    --primary: #FDF0D5;
+    --secondary: #669BBC;
+    --on-primary: #212529;
+}
+
+body {
+    background-color:var(--primary);
+}
+
+.navbar {
+    font-family: "Work sans", sans-serif;
+    padding: 20px 20px;
+}
+
+.navbar-toggler {
+    color: var(--primary);
+}
+
+.navbar-brand {
+    color: var(--primary);
+    font-size: 1.1rem;
+}
+
+.short-name {
+    display: none;
+}
+
+.navbar-nav {
+    font-size: 1.1rem;
+}
+
+.nav-link {
+    color: var(--primary);
+}
+
+.navbar-brand:hover {
+    color: var(--secondary);
+    font-size: 1.1rem;
+}
+
+.nav-link:hover {
+    color: var(--secondary);
+}
+
+@media(max-width: 575px){
+    .short-name {
+        display: inline-block;
+    }
+    .full-name {
+        display: none;
+    }
+}
