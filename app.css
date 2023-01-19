@@ -1,6 +1,53 @@
+/* css reset from meyerweb */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* css styles */
 :root {
     --primary: #FDF0D5;
     --secondary: #669BBC;
+    --tertiary: #003049;
     --on-primary: #212529;
 }
 
@@ -8,9 +55,35 @@ body {
     background-color:var(--primary);
 }
 
+/* background image styling*/
+
+.bg {
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    min-width: 200%;
+    min-height: 200%;
+    z-index: -1;
+}
+
+.bg img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    min-width: 50%;
+    min-height: 50%;
+}
+
+/* navbar styles */
+
 .navbar {
     font-family: "Work sans", sans-serif;
     padding: 20px 20px;
+    position: relative;
+    overflow: hidden;
 }
 
 .navbar-toggler {
@@ -26,21 +99,71 @@ body {
     display: none;
 }
 
-.navbar-nav {
+.nav-link {
+    color: var(--primary);
     font-size: 1.1rem;
 }
 
-.nav-link {
-    color: var(--primary);
-}
+/* hover styles */
 
 .navbar-brand:hover {
     color: var(--secondary);
-    font-size: 1.1rem;
 }
 
 .nav-link:hover {
     color: var(--secondary);
+}
+
+/* section styles */
+
+.filler {
+    float: left;
+    opacity: 0;
+    background-color: var(--primary);
+    height: 100vh;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 1%;
+}
+
+.home {
+    display: inline-block;
+    /* opacity: 0; */
+    margin: 20px 10px;
+    padding: 10px 10px;
+    background-color: var(--tertiary);
+    color: var(--primary);
+    border: 1px solid black;
+    border-radius: 1%;
+}
+
+.bio {
+    display: inline-block;
+    margin: 20px 10px;
+    padding: 10px 10px;
+    background-color: var(--primary);
+    color: var(--on-primary);
+    border: 1px solid black;
+    border-radius: 1%;
+}
+
+.contact {
+    display: inline-block;
+    margin: 20px 10px;
+    padding: 10px 10px;
+    background-color: var(--secondary);
+    color: var(--on-primary);
+    border: 1px solid black;
+    border-radius: 1%;
+}
+
+/* footer styles */
+.footer {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: space-between;
+    justify-content: center;
 }
 
 @media(max-width: 575px){
@@ -51,3 +174,14 @@ body {
         display: none;
     }
 }
+
+/* TODOS
+
+create landing page section with photo
+set each section to one page size and style with photos and css animations
+link to resume on about section (pdf icon?)
+form for contact section? or a link to future projects section?
+fix sticky scroll top nav (requires some js?)
+
+*/
+
