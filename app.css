@@ -52,6 +52,15 @@ table {
 }
 
 /* navbar styles */
+
+/*
+                                RETURN TO:
+    Set header to 0vh to keep homepage background visible underneath i,
+    but now the home button doesn't shift the focus anymore... Not a big deal
+    but sort of makes it seem like the button is useless.
+
+*/
+
 .header {
     background-image: url(imgs/pawel-czerwinski-3-bDL0iRcbI-unsplash.jpg);
     width: 100%;
@@ -129,14 +138,16 @@ table {
     width: 100vw;
     height: 100vh;
     background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
+
+/* home page */
 
 #home-page {
     background-image: linear-gradient(rgba(255, 221, 0, 0.5), rgba(0, 0, 0, 0.3)), url(imgs/pawel-czerwinski-3-bDL0iRcbI-unsplash.jpg);
     color: var(--tertiary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .home-header{
@@ -149,11 +160,79 @@ table {
     opacity: .2;
 }
 
+/* about page */
+
+
+/*
+                    RETURN TO:
+    Spacing on about page needs work. Could
+*/
+
 #about-page {
     background-image: linear-gradient(rgba(173, 172, 192, 0.499), rgba(0, 0, 0, 0.3)), url(imgs/nong-v-VysNxCRm7_U-unsplash.jpg);
     color: var(--primary);
 }
 
+.about-header {
+    display: flex;
+    align-self: start;
+    justify-content: center;
+    padding: 40px 40px;
+    transition: color .5s linear, box-shadow .2s linear;
+}
+
+.about-header:hover {
+    color: var(--secondary);
+    /* box-shadow: 1px 10px 100px var(--secondary) */
+}
+
+.photo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+.photo-container-small {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+.headshot {
+    border: 3.5px solid var(--secondary);
+    border-radius: 50%;
+    opacity: .6;
+}
+
+.headshot:hover {
+    opacity: .8;
+}
+
+.bio-container {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.8;
+    font-size: 2vh;
+    padding-top: 50px;
+}
+
+.bio-container-small {
+    display: none;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.8;
+    font-size: 2vh;
+    padding-top: 300px;
+    padding-left: 60px;
+}
+
+
+/* contact page */
 
 #contact-page {
     background-image: linear-gradient(rgba(255, 127, 127, 0.499), rgba(0, 0, 0, 0.3)), url(imgs/andrej-lisakov-V2OyJtFqEtY-unsplash.jpg);
@@ -184,15 +263,36 @@ table {
     .full-name {
         display: none;
     }
+    .bio-container {
+        display: none;
+    }
+    .bio-container-small {
+        display: inline-block;
+    }
+    /* .photo-container {
+        padding-top: 300px; */
 }
+
+/* @media(max-width: 575px){
+    .bio-container {
+        display: none;
+    }
+    .bio-container-small {
+        display: inline-block;
+    }
+} */
+
 
 /* TODOS
 
-create landing page section with photo
-set each section to one page size and style with photos and css animations
+
+
 link to resume on about section (pdf icon?)
 form for contact section? or a link to future projects section?
 fix sticky scroll top nav (requires some js?)
+
+small bio doesn't quite work yet
+headshot on-click to toggle bio... or to reveal bio on small media query?
 
 */
 
