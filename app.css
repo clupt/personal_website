@@ -84,20 +84,7 @@ table {
     color: var(--primary);
 }
 
-.navbar-brand {
-    color: var(--primary);
-    font-size: 1.1rem;
-    padding: 10px;
-    box-shadow: 0px;
-    border-radius: 2px 2px 2px;
-    transition: color .5s linear, box-shadow .2s linear, transform .2s linear;
-}
-
-.short-name {
-    display: none;
-}
-
-.nav-link {
+.navbar-brand, .nav-link{
     color: var(--primary);
     font-size: 1.1rem;
     padding: 10px;
@@ -107,19 +94,33 @@ table {
     transition: color .5s linear, box-shadow .2s linear, transform .2s linear;
 }
 
+.short-name {
+    display: none;
+}
+
+/* .nav-link {
+    color: var(--primary);
+    font-size: 1.1rem;
+    padding: 10px;
+    box-shadow: 0px;
+    margin-top: 10px;
+    border-radius: 2px 2px 2px;
+    transition: color .5s linear, box-shadow .2s linear, transform .2s linear;
+} */
+
 /* hover styles */
 
-.navbar-brand:hover {
+.navbar-brand:hover, .nav-link:hover{
     color: var(--secondary);
     box-shadow: 2px 2px 2px 1px var(--secondary);
     transform: translateX(-3px) translateY(-3px);
 }
 
-.nav-link:hover {
+/* .nav-link:hover {
     color: var(--secondary);
     box-shadow: 2px 2px 2px 1px var(--secondary);
     transform: translateX(-3px) translateY(-3px);
-}
+} */
 
 /* .navbar-toggler:hover {
     color: var(--secondary);
@@ -162,10 +163,9 @@ table {
 
 /* about page */
 
-
 /*
                     RETURN TO:
-    Spacing on about page needs work. Could
+    Spacing on about page needs work.
 */
 
 #about-page {
@@ -183,7 +183,6 @@ table {
 
 .about-header:hover {
     color: var(--secondary);
-    /* box-shadow: 1px 10px 100px var(--secondary) */
 }
 
 .photo-container {
@@ -211,7 +210,7 @@ table {
 }
 
 .bio-container {
-    display: flex;
+    display: relative;
     align-self: center;
     justify-content: center;
     align-items: center;
@@ -239,6 +238,16 @@ table {
     color: var(--primary);
 }
 
+.contact-link {
+    text-decoration: none;
+    color: var(--primary);
+    text-align: center;
+    transition: color .5s linear;
+}
+
+.contact-link:hover, .contact-header:hover{
+    color: var(--secondary);
+}
 
 /* icon styles */
 .icon {
@@ -273,26 +282,17 @@ table {
         padding-top: 300px; */
 }
 
-/* @media(max-width: 575px){
-    .bio-container {
-        display: none;
-    }
-    .bio-container-small {
-        display: inline-block;
-    }
-} */
 
 
 /* TODOS
 
-
-
 link to resume on about section (pdf icon?)
-form for contact section? or a link to future projects section?
+form for contact section? -- no for now point while static
 fix sticky scroll top nav (requires some js?)
-
-small bio doesn't quite work yet
+change welcome hover to delayed animation and fix it
 headshot on-click to toggle bio... or to reveal bio on small media query?
+carousel?
 
+look in to hosting options
 */
 
