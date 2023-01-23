@@ -55,10 +55,9 @@ table {
 
 /*
                                 RETURN TO:
-    Set header to 0vh to keep homepage background visible underneath i,
+    Set header to 0vh to keep homepage background visible underneath it,
     but now the home button doesn't shift the focus anymore... Not a big deal
     but sort of makes it seem like the button is useless.
-
 */
 
 .header {
@@ -108,7 +107,7 @@ table {
 
 /*
     section styles
-    styles for bio div, contactinfo div, etc
+    styles for bio div, contact info div, etc
 */
 
 
@@ -158,7 +157,7 @@ table {
     display: flex;
     align-self: start;
     justify-content: center;
-    padding: 40px 40px;
+    padding: 20px 40px;
     transition: color .5s linear;
 }
 
@@ -173,12 +172,12 @@ table {
     padding-top: 30px;
 }
 
-.photo-container-small {
+/* .photo-container-small {
     display: none;
     align-items: center;
     justify-content: center;
     padding-top: 30px;
-}
+} */
 
 .headshot {
     border: 3.5px solid var(--secondary);
@@ -200,7 +199,7 @@ table {
     padding-top: 50px;
 }
 
-.bio-container-small {
+/* .bio-container-small {
     display: none;
     align-self: center;
     justify-content: center;
@@ -209,7 +208,13 @@ table {
     font-size: 2vh;
     padding-top: 300px;
     padding-left: 60px;
+} */
+
+.bio-div {
+    background-color: var(--primary);
+    color: var(--on-primary);
 }
+
 
 /* contact page */
 

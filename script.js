@@ -1,7 +1,12 @@
 const faceBtn = document.querySelector('#face-button');
 
 function showBio() {
-  document.querySelector('#bio-div').style.display = 'inline-block';
+  const bioDiv = document.querySelector('#bio-div');
+  if (bioDiv.style.display === 'none') {
+    bioDiv.style.display = 'inline-block';
+  } else {
+    bioDiv.style.display = 'none';
+  }
 };
 
 faceBtn.addEventListener('click', () => {
