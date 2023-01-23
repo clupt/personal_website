@@ -98,16 +98,6 @@ table {
     display: none;
 }
 
-/* .nav-link {
-    color: var(--primary);
-    font-size: 1.1rem;
-    padding: 10px;
-    box-shadow: 0px;
-    margin-top: 10px;
-    border-radius: 2px 2px 2px;
-    transition: color .5s linear, box-shadow .2s linear, transform .2s linear;
-} */
-
 /* hover styles */
 
 .navbar-brand:hover, .nav-link:hover{
@@ -115,17 +105,6 @@ table {
     box-shadow: 2px 2px 2px 1px var(--secondary);
     transform: translateX(-3px) translateY(-3px);
 }
-
-/* .nav-link:hover {
-    color: var(--secondary);
-    box-shadow: 2px 2px 2px 1px var(--secondary);
-    transform: translateX(-3px) translateY(-3px);
-} */
-
-/* .navbar-toggler:hover {
-    color: var(--secondary);
-} */
-
 
 /*
     section styles
@@ -173,15 +152,17 @@ table {
     color: var(--primary);
 }
 
-.about-header {
+.about-header, .contact-link {
+    text-decoration: none;
+    color: var(--primary);
     display: flex;
     align-self: start;
     justify-content: center;
     padding: 40px 40px;
-    transition: color .5s linear, box-shadow .2s linear;
+    transition: color .5s linear;
 }
 
-.about-header:hover {
+.about-header:hover, .contact-link:hover {
     color: var(--secondary);
 }
 
@@ -210,7 +191,7 @@ table {
 }
 
 .bio-container {
-    display: relative;
+    display: none;
     align-self: center;
     justify-content: center;
     align-items: center;
@@ -230,23 +211,11 @@ table {
     padding-left: 60px;
 }
 
-
 /* contact page */
 
 #contact-page {
     background-image: linear-gradient(rgba(255, 127, 127, 0.499), rgba(0, 0, 0, 0.3)), url(imgs/andrej-lisakov-V2OyJtFqEtY-unsplash.jpg);
     color: var(--primary);
-}
-
-.contact-link {
-    text-decoration: none;
-    color: var(--primary);
-    text-align: center;
-    transition: color .5s linear;
-}
-
-.contact-link:hover, .contact-header:hover{
-    color: var(--secondary);
 }
 
 /* icon styles */
