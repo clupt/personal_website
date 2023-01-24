@@ -62,7 +62,7 @@ table {
 
 .header {
     background-image: url(imgs/pawel-czerwinski-3-bDL0iRcbI-unsplash.jpg);
-    width: 100%;
+    width: 100vw;
     height: 0vh;
     background-size: cover;
 }
@@ -117,6 +117,7 @@ table {
     width: 100vw;
     height: 100vh;
     background-size: cover;
+    overflow: hidden;
 }
 
 /* home page */
@@ -129,15 +130,16 @@ table {
     align-items: center;
 }
 
-.home-header{
-    transition: transform .9s ease-in-out, opacity .5s linear;
-    opacity: .8;
+.home-header {
+    animation: welcome 10s ease forwards .8s;
 }
 
-.home-header:hover {
-    transform: scale(1.1) rotate(-76deg) translateX(3px) translateY(143px);
-    opacity: .2;
-}
+/*
+                    RETURN TO:
+    Welcome animation current expands the page horizontally and creates a ton
+    of white space on the right side. Either needs a media query to not run after a certain
+    breakpoint or maybe the background needs to be set to overflow hidden?
+*/
 
 /* about page */
 
@@ -161,36 +163,26 @@ table {
     transition: color .5s linear;
 }
 
-.about-header:hover, .contact-link:hover {
-    color: var(--secondary);
-}
-
 .photo-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 30px;
 }
-
-/* .photo-container-small {
-    display: none;
-    align-items: center;
-    justify-content: center;
-    padding-top: 30px;
-} */
 
 .headshot {
     border: 3.5px solid var(--secondary);
     border-radius: 50%;
     opacity: .6;
+    transition: transform .5s ease-in, opacity 2s ease;
 }
 
 .headshot:hover {
-    opacity: .8;
+    opacity: 1;
+    transform: rotate(-10deg);
 }
 
 .bio-container {
-    display: none;
+    display: flex;
     align-self: center;
     justify-content: center;
     align-items: center;
@@ -199,36 +191,28 @@ table {
     padding-top: 50px;
 }
 
-/* .bio-container-small {
-    display: none;
-    align-self: center;
-    justify-content: center;
-    align-items: center;
-    line-height: 1.8;
-    font-size: 2vh;
-    padding-top: 300px;
-    padding-left: 60px;
-} */
-
-.bio-div {
-    background-color: var(--primary);
-    color: var(--on-primary);
-}
-
 
 /* contact page */
 
 #contact-page {
-    background-image: linear-gradient(rgba(255, 127, 127, 0.499), rgba(0, 0, 0, 0.3)), url(imgs/andrej-lisakov-V2OyJtFqEtY-unsplash.jpg);
+    background-image: repeating-radial-gradient(rgba(255, 127, 127, 0.499), rgba(0, 0, 0, 0.2)), url(imgs/andrej-lisakov-V2OyJtFqEtY-unsplash.jpg);
     color: var(--primary);
 }
 
+.contact-link:hover {
+    color: var(--secondary);
+}
+
+.coming-soon {
+    text-align: center;
+    animation: comingSoon 4s ease-in-out infinite;
+}
 /* icon styles */
-.icon {
+/* .icon {
     display: flex;
     justify-content: center;
     align-self: end;
-}
+} */
 
 /* footer styles */
 .footer {
@@ -249,22 +233,50 @@ table {
     .bio-container {
         display: none;
     }
-    .bio-container-small {
-        display: inline-block;
-    }
-    /* .photo-container {
-        padding-top: 300px; */
 }
+
+/* keyframes */
+
+@keyframes welcome {
+    0% {
+        transition: transform .9s ease-in-out, opacity .5s linear;
+        opacity: .8;
+    }
+    100% {
+        transform: scale(2.3) rotate(-80deg) translateX(25px) translateY(165px);
+        opacity: .2;
+    }
+}
+
+/*
+-- delayed animation to change innertext from "about" to "click face"
+@keyframes faceClick {
+
+}
+*/
+
+
+@keyframes comingSoon {
+    0%, 100% {
+        opacity: .2;
+    }
+    50% {
+        opacity: .8;
+    }
+}
+
+
+
 
 
 
 /* TODOS
 
 link to resume on about section (pdf icon?)
-form for contact section? -- no for now point while static
+form for contact section? -- coming soon animation
 fix sticky scroll top nav (requires some js?)
-change welcome hover to delayed animation and fix it
-headshot on-click to toggle bio... or to reveal bio on small media query?
+
+
 carousel?
 
 look in to hosting options

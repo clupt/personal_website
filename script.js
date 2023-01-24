@@ -1,14 +1,14 @@
 const faceBtn = document.querySelector('#face-button');
 
-function showBio() {
+function toggleBio() {
   const bioDiv = document.querySelector('#bio-div');
   if (bioDiv.style.display === 'none') {
-    bioDiv.style.display = 'inline-block';
+    bioDiv.style.display = 'flex';
   } else {
     bioDiv.style.display = 'none';
   }
 };
 
 faceBtn.addEventListener('click', () => {
-  showBio();
+  toggleBio();
 });
