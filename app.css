@@ -142,7 +142,7 @@ table {
     display: flex;
     align-self: start;
     justify-content: center;
-    padding-top: 79px;
+    padding-top: 80px;
     padding-left: 40px;
     padding-right: 40px;
     transition: color .5s linear;
@@ -189,15 +189,28 @@ table {
 
 .coming-soon {
     text-align: center;
-    animation: comingSoon 8s ease-in-out infinite;
+    animation: comingSoon 4s ease-in-out infinite;
 }
+
 /* icon styles */
 
 .icons {
     display: flex;
-    /* justify-content: end; */
     justify-self: end;
     margin: 0px 10px;
+}
+
+.icon {
+    margin: 0px 5px;
+    text-decoration: none;
+    color: var(--on-primary);
+}
+
+.icon:hover {
+    color: var(--secondary);
+    padding-left: 3px;
+    padding-right: 5px;
+    transform: scale(2);
 }
 
 /* footer styles */
@@ -214,15 +227,6 @@ table {
     display: none;
 }
 
-.icon {
-    margin: 0px 5px;
-    text-decoration: none;
-    color: var(--on-primary);
-}
-
-.icon:hover {
-    color: var(--secondary);
-}
 
 @media(max-width: 576px){
     .short-name {
@@ -254,8 +258,21 @@ table {
 @keyframes comingSoon {
     0%, 100% {
         opacity: .4;
+        transform: rotate(-5deg);
     }
     50% {
-        opacity: .7;
+        opacity: .6;
+        transform: rotate(5deg);
     }
 }
+
+/* @keyframes comingSoonReverse{
+    0%, 100% {
+        opacity: .4;
+        transform: rotate(5deg);
+    }
+    50% {
+        opacity: .6;
+        transform: rotate(-5deg);
+    }
+} */
