@@ -66,6 +66,13 @@ table {
     opacity: .8;
 }
 
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: red;
+}
+
 .navbar {
     font-family: "Work sans", sans-serif;
     padding: 20px 20px;
@@ -118,7 +125,8 @@ table {
 }
 
 .home-header {
-    animation: welcome 4s cubic-bezier(0.23, -0.15, 1, -0.51) forwards .8s;
+    transform: scale(2.3) rotate(-80deg) translateX(25px) translateY(165px);
+    opacity: .2;
 }
 
 /* about page */
@@ -134,7 +142,9 @@ table {
     display: flex;
     align-self: start;
     justify-content: center;
-    padding: 20px 40px;
+    padding-top: 79px;
+    padding-left: 40px;
+    padding-right: 40px;
     transition: color .5s linear;
 }
 
@@ -157,13 +167,13 @@ table {
 }
 
 .bio-container {
-    display: flex;
+    display: fixed;
     align-self: center;
     justify-content: center;
     align-items: center;
-    line-height: 1.8;
+    line-height: 2;
     font-size: 2vh;
-    padding-top: 50px;
+    padding-top: 30px;
 }
 
 /* contact page */
@@ -183,11 +193,12 @@ table {
 }
 /* icon styles */
 
-/* .icon {
+.icons {
     display: flex;
-    justify-content: center;
-    align-self: end;
-} */
+    /* justify-content: end; */
+    justify-self: end;
+    margin: 0px 10px;
+}
 
 /* footer styles */
 
@@ -195,11 +206,25 @@ table {
     width: 100%;
     position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     margin: 10px;
 }
 
-@media(max-width: 575px){
+.credits-small {
+    display: none;
+}
+
+.icon {
+    margin: 0px 5px;
+    text-decoration: none;
+    color: var(--on-primary);
+}
+
+.icon:hover {
+    color: var(--secondary);
+}
+
+@media(max-width: 576px){
     .short-name {
         display: inline-block;
     }
@@ -209,20 +234,22 @@ table {
     .bio-container {
         display: none;
     }
+    .credits-large {
+        display: none;
+    }
+    .credits-small {
+        display: flex;
+    }
 }
 
-/* keyframes */
-
-@keyframes welcome {
-    0% {
-        transition: transform .5s linear, opacity .5s linear;
-        opacity: .8;
-    }
-    100% {
-        transform: scale(2.3) rotate(-80deg) translateX(25px) translateY(165px);
+@media(max-width: 768px){
+    .home-header {
+        transform: scale(1.3) rotate(10deg) translateX(77px) translateY(-39px);
         opacity: .2;
     }
 }
+
+/* keyframes */
 
 @keyframes comingSoon {
     0%, 100% {
@@ -232,11 +259,3 @@ table {
         opacity: .7;
     }
 }
-
-/*
-                    TODOS
-    change container styling for bio
-    link to resume on about section (pdf icon?)
-    fix sticky scroll top nav
-*/
-
