@@ -44,6 +44,7 @@ table {
 }
 
 /* css styles */
+
 :root {
     --primary: #FDF0D5;
     --secondary: #669BBC;
@@ -52,13 +53,6 @@ table {
 }
 
 /* navbar styles */
-
-/*
-                                RETURN TO:
-    Set header to 0vh to keep homepage background visible underneath it,
-    but now the home button doesn't shift the focus anymore... Not a big deal
-    but sort of makes it seem like the button is useless.
-*/
 
 .header {
     background-image: url(imgs/pawel-czerwinski-3-bDL0iRcbI-unsplash.jpg);
@@ -75,7 +69,6 @@ table {
 .navbar {
     font-family: "Work sans", sans-serif;
     padding: 20px 20px;
-    /* position: relative; */
     overflow: hidden;
 }
 
@@ -105,12 +98,6 @@ table {
     transform: translateX(-3px) translateY(-3px);
 }
 
-/*
-    section styles
-    styles for bio div, contact info div, etc
-*/
-
-
 /* page styles*/
 
 .one-page {
@@ -131,22 +118,10 @@ table {
 }
 
 .home-header {
-    animation: welcome 10s ease forwards .8s;
+    animation: welcome 4s cubic-bezier(0.23, -0.15, 1, -0.51) forwards .8s;
 }
 
-/*
-                    RETURN TO:
-    Welcome animation current expands the page horizontally and creates a ton
-    of white space on the right side. Either needs a media query to not run after a certain
-    breakpoint or maybe the background needs to be set to overflow hidden?
-*/
-
 /* about page */
-
-/*
-                    RETURN TO:
-    Spacing on about page needs work.
-*/
 
 #about-page {
     background-image: linear-gradient(rgba(173, 172, 192, 0.499), rgba(0, 0, 0, 0.3)), url(imgs/nong-v-VysNxCRm7_U-unsplash.jpg);
@@ -191,7 +166,6 @@ table {
     padding-top: 50px;
 }
 
-
 /* contact page */
 
 #contact-page {
@@ -205,9 +179,10 @@ table {
 
 .coming-soon {
     text-align: center;
-    animation: comingSoon 4s ease-in-out infinite;
+    animation: comingSoon 8s ease-in-out infinite;
 }
 /* icon styles */
+
 /* .icon {
     display: flex;
     justify-content: center;
@@ -215,6 +190,7 @@ table {
 } */
 
 /* footer styles */
+
 .footer {
     width: 100%;
     position: relative;
@@ -239,7 +215,7 @@ table {
 
 @keyframes welcome {
     0% {
-        transition: transform .9s ease-in-out, opacity .5s linear;
+        transition: transform .5s linear, opacity .5s linear;
         opacity: .8;
     }
     100% {
@@ -248,37 +224,19 @@ table {
     }
 }
 
-/*
--- delayed animation to change innertext from "about" to "click face"
-@keyframes faceClick {
-
-}
-*/
-
-
 @keyframes comingSoon {
     0%, 100% {
-        opacity: .2;
+        opacity: .4;
     }
     50% {
-        opacity: .8;
+        opacity: .7;
     }
 }
 
-
-
-
-
-
-/* TODOS
-
-link to resume on about section (pdf icon?)
-form for contact section? -- coming soon animation
-fix sticky scroll top nav (requires some js?)
-
-
-carousel?
-
-look in to hosting options
+/*
+                    TODOS
+    change container styling for bio
+    link to resume on about section (pdf icon?)
+    fix sticky scroll top nav
 */
 
